@@ -1,0 +1,23 @@
+fstat is speed then stat (reason is that fstat uarea madhun file table varun incode inode table madhun inode details gheto toh meta data and stat ch detail baagyche ahe read this  )
+
+when we call system call it internally maps to number there is a table (read about this process)
+
+frozen image of that process at that moment
+1 and 2 is nothing but process state ch number
+mode switch 1-2 or 2-1(user to kernel or kernel to user only)
+context switch is from 2-2 (its in kernel to kernel only and the entire states changes happens here )
+ 3 types of stack astat (read about this more )
+1 user stack
+2 kernel stack
+3 context stack 
+
+hole ins the file (check details and explore ways to create hole lseek and truncate ne karta yeta)
+we can create the hole in the file by mentioning the offset value more than the data present in the file 
+
+link system all deals with hard link it inrease the link count
+and unlink dereases size of link ount whih we see in stat command 
+hardlink la new inode nahi bhetat ekah inode la donhi file point karta 
+softlink la new inode bhetta symbolic link and shortcut one and same
+readlink command and system call to read the shortcut file to check ki symlink madhe lhilele 
+file ch name
+dangling link in soft link

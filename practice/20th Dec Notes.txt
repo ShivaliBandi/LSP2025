@@ -1,0 +1,68 @@
+stat() sagla types ch files la use hota 
+lstat is designed for symbolic link
+fstat directory
+read about this
+
+hardlink can we created across the filesystem (mount read about this)
+
+
+-----------------------------------------
+directory syscall
+opendir()
+closedir()
+mkdir()
+rmdir()
+readdir()
+
+
+we dont have write dir becasue we dont have right fpor this only kernel can do this 
+we can smartly ans this in interview creat use jevha karto files ch hey write ch karto na dir madhe
+rmdir is used to delete the directory but it works only if the directory is empty
+readdir will give you directory entries 
+
+----------------------------------------------------------
+sync()
+fdatasync()
+fsync()
+
+delay writed avoid karyala hey system call ahe
+sync system call, call kelavr te system buffer la line madhe ubha karta disk work lhilayla
+fsync() fd pass karto apan hey kay karto system buffer and te buffer konta inode madhe ahe te pn jate line madhe (inode mahd update hotat na meta data 
+which is imp so te pn buffer asta line madhe)
+fdatasync hey fakt te particular data ch system buffer la line madhe ubha karta
+every 10 min la apan kay tari update kartoy same file madhe so asha case madhe apan fdatasync la call kela pahije 
+all this is request yet 
+using fdatasync is bit risky in case ki system buffer mhnje data wala update kela nd light gele so  inode pdate ch nahi jhala tr we cant access the 
+data even though data gela pn meta data nahi gela tr ky kasa access karnar
+
+-------------------
+sync call kela te ALL pending modifications of inode ch buffer and system buffer(data) sagle not only our process tr sagle proces che 
+syncfs we pass fd so hey tya specific file ch pending modifications of inode and data line madhe queue 
+syncfs is OS dependent so some OS has is we use fsync  hey kam complete hoil parynt process block asta 
+-----------------
+
+flush and fflush read about this in short not much imp just definition and all
+
+-------------------------------------------------------------
+rename()
+it updates the entry of directory not inode and all just rename 
+rename mhnje moving the files 
+for rename do we need permission no for file no but we need directory permission jr jya dircotry madh hey jayaal pahije 
+directory permission nasel tr tithe nahi janar
+
+
+
+-----------------------
+root pasun path dila tr relative path
+and adhun madhun dila tr te absolute path
+---------------------------------------------------------
+getcwd() this funtions a null string that is absolute path name of current path name if buff mention kela tr
+get current working directory
+
+
+
+
+--------------------------------------------------------------
+symbolic link should be reated accross the directory mostly hey danger and weird ah hey ka asa read about this
+symbolic regular file sarkha open nahi kart open syscall ne hot nahi 
+cat nahi karu shakt
