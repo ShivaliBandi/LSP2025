@@ -5,7 +5,7 @@
 int main()
 {
     int iRet=0;
-    iRet=link("output.txt","newOutput.txt");
+    iRet=link("output.txt","newOutput.txt");//hard link we create had link in same directory
     if(iRet==0)
         printf("link works yeppie\n");
     else

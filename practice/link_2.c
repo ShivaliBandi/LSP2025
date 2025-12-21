@@ -5,7 +5,7 @@
 int main()
 {
     int iRet=0;
-    iRet=link("./demo.txt","./Test/demo.txt");
+    iRet=link("./demo.txt","./Test/demo.txt");//hard link in different directory
     if(iRet==0)
         printf("link works yeppie\n");
     else

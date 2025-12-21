@@ -11,11 +11,11 @@ int main()
     
     char cBuffer[50];
     memset(cBuffer,'\0',sizeof(cBuffer));
-    getcwd(cBuffer,sizeof(cBuffer));
+    getcwd(cBuffer,sizeof(cBuffer));//get current working directory
     printf("current directory name: %s\n",cBuffer);
-    chdir("./Data");
+    chdir("./Data");//we changed the direcotry 
     memset(cBuffer,'\0',sizeof(cBuffer));
-    getcwd(cBuffer,sizeof(cBuffer));
+    getcwd(cBuffer,sizeof(cBuffer));//we checked 
     printf("current directory name: %s\n",cBuffer);
     return 0;
 }

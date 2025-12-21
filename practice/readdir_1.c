@@ -10,7 +10,7 @@ int main()
 {
     
     DIR *dp=NULL;
-    struct dirent *ptr=NULL;
+    struct dirent *ptr=NULL;//we have created a ppinter of dirent structure which will hold the return value of readdir
     dp=opendir("./Data");
     if(dp==NULL)
         printf("%s\n",strerror(errno));
@@ -28,3 +28,4 @@ int main()
 
     return 0;
 }
+//sequence of readdir is not fixed in all machine

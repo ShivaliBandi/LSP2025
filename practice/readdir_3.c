@@ -23,7 +23,7 @@ int main()
        /*
        fd=open(ptr->d_name,O_RDONLY);
        
-       
+       suggestion to try opening file here and do some operation for better understanding
        */
     }
     closedir(dp);

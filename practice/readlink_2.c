@@ -11,7 +11,7 @@ int main()
     char cBuffer[50];
     memset(cBuffer,'\0',sizeof(cBuffer));
 
-    iRet=readlink("./outputl.txt",cBuffer,sizeof(cBuffer));
+    iRet=readlink("./outputl.txt",cBuffer,sizeof(cBuffer));//reading context of symbolic link
     if(iRet==-1)
         printf("ERROR: %s\n",strerror(errno));
     cBuffer[iRet]='\0';

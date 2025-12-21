@@ -16,7 +16,8 @@ int main()
         return -1;
     }
 
-    iRet=rename("./process.txt","./Test/LSP.txt");
+    iRet=rename("./process.txt","./Test/LSP.txt");//rename in another directory it is same file check using stat command it just changes it name 
+    //remaining all details remain same
     if(iRet==0)
         printf("Yepiie rename success\n");
     else

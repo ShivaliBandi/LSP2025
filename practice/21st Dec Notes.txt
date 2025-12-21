@@ -1,0 +1,55 @@
+-------------------------------------
+pread and pwrite
+postional read and possitional write if i want to read from 5th offset and read specific length so hey system call ala
+bt hya mule file system ch offset change hota and hya case madhe jr multithreading use kartana hey same file
+ access kartana 
+issue hota offset halla tr
+example T1 and T2 demo.txt use kartay T1 ne offset change kela read kela and change jhala offset and T2 la start 
+la first time read kartoy 
+tr T1 ne change keleel mule T2 ch read affect karta
+hyat forth paramter apan offset deto but in this apan offset start pasun ch dyav lagta mhnje te start pasun ch 
+offset consider karta
+if it doesnt change offset mng pread and pwrite kasa work karta atun read about this
+
+
+ith aplyal mahiti pread and pwrite is combination of lseek and read so incase aapn jar lseek and 
+read kart astan imaage the situation where sleek kela and process ne context switch kela and 
+tyat lseek jhaal and thambla so p2 ala and kagu cganges jela and sample and nntr p1 part kam kartan
+file madhe ashe changes ale je aplyala nako hota hey process je ahe atomic nahi hot so when we use pread or 
+pwrite hey atomic kam hota madhe context switch nahi hot
+--------------------------------------------------------
+dup (duplicate fd)
+hey system call kay krta  parameter old fd and te new fd deta
+return calue new fd  it is nothing but reference 
+dup mule je new fd yeta te first unused fd deta
+
+in case of choice of fd we use dup2 so here we give 2 parameter 1st fd second is position of 
+fd which we want
+
+
+fd hey old fd ahe and dup mule new fd is fd1 so in case apan old fd close kela tr file ajun 
+open ahe karan fd1 is still
+  it share offset and file status 
+
+
+what is use
+atomic reading writing karayche nasel two thread tyala dup mule fd and fd1 bhetel dya 
+and two thread wiritng karel no matter what the sequence is .
+
+----------------------------------------------------------------------
+note chec, why symbolic link of stat+5 is not working 
+lstat is the solution
+
+------------------------------------------------------------------
+fork through child process apan execl call kela 
+so fork la child la text data stack parentr ch same copy jhala jevha apa child madhe execl kela run tevha te copy kelala text
+data stack flush karta purna 
+
+------------------------------------------------------------
+proces che tables
+uarea -> proces table -> per process region table -> region table
+region table madhe page number astat similar like fs madhe block number asta tasa typ e mahde page number asta
+
+dirty bit read about this 
+
+
