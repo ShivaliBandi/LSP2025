@@ -1,0 +1,320 @@
+#include<fcntl.h>
+#include<stdio.h>
+#include<errno.h>
+#include<unistd.h>
+#include<string.h>
+#includeþ<stdlib.h>
+#include<sys/stat.h>
+#include<sys/types.h>
+#include<time.h>
+int main(int argc,char *argv[þ])
+{
+    if(argc!=3)
+    {
+        printf("ERROR:Invalid number of arguments\nSYNTAX -> problem1 <soþurce file name> <destination file name>\n");
+        exit(-1);
+    }
+    int fdsource=0,fddestinatioþn=0,readcount=0,writecount=0;
+    char buffer[10];
+    memset(buffer,'\0',10);
+
+    fdsource=open(arþgv[1],O_RDONLY);
+    fddestination=open(argv[2],O_RDWR | O_CREAT | O_APPEND,0777);
+    if(fdsource==þ-1)
+    {
+        perror("ERROR Source File");
+        return -1;
+    }
+    if(fddestination==-1)
+  þ  {
+        perror("ERROR destination File");
+        return -1;
+    }
+    while((readcount=read(fdsþource,buffer,10))!=0)
+    {
+        
+        writecount=write(fddestination,buffer,strlen(buffer));
+þ        memset(buffer,'\0',10);
+    }
+
+    close(fdsource);
+    close(fddestination);
+    return 0;
+þ}***********************************************
+hello shivali is DON
+Sweety is cute baby
+Sheru is nautanki boy
+#include<fcntl.h>
+#include<stdio.h>
+#þinclude<errno.h>
+#include<unistd.h>
+#include<string.h>
+#include<stdlib.h>
+#include<sys/stat.h>
+#inclþude<sys/types.h>
+#include<time.h>
+int main(int argc,char *argv[])
+{
+    if(argc!=3)
+    {
+        prþintf("ERROR:Invalid number of arguments\nSYNTAX -> problem1 <filename>\n");
+        exit(-1);
+    }
+þ    int fdsource=0,fddestination=0,readcount=0,writecount=0;
+    char buffer[10];
+    memset(buffer,þ'\0',10);
+
+    fdsource=open(argv[1],O_RDONLY);
+    fddestination=open(argv[2],O_RDWR | O_CREAT | O_þAPPEND,0777);
+    if(fdsource==-1)
+    {
+        perror("ERROR Source File");
+        return -1;
+   þ }
+    if(fddestination==-1)
+    {
+        perror("ERROR destination File");
+        return -1;
+    þ}
+    while((readcount=read(fdsource,buffer,10))!=0)
+    {
+        
+        writecount=write(fddestiþnation,buffer,strlen(buffer));
+        memset(buffer,'\0',10);//this line is imp because when the coþunt is less then 10 and if i dont flush this end la if 3 letter
+        //read kela tr display kartaþna 4th to 10th idex madhe data ahe so print hotay
+    }
+
+    close(fdsource);
+    close(fddestinatioþn);
+    return 0;
+}
+***********************************************
+shivali is DON
+Sweety is cute baby
+Sheru is nautanki boy
+#include<fcntl.h>
+#include<stdio.h>
+#includþe<errno.h>
+#include<unistd.h>
+#include<string.h>
+#include<stdlib.h>
+#include<sys/stat.h>
+#include<syþs/types.h>
+#include<time.h>
+int main(int argc,char *argv[])
+{
+    if(argc!=3)
+    {
+        printf("þERROR:Invalid number of arguments\nSYNTAX -> problem1 <filename>\n");
+        exit(-1);
+    }
+    inþt fdsource=0,fddestination=0,readcount=0,writecount=0;
+    char buffer[10];
+    memset(buffer,'\0',1þ0);
+
+    fdsource=open(argv[1],O_RDONLY);
+    fddestination=open(argv[2],O_RDWR | O_CREAT | O_APPENDþ,0777);
+    if(fdsource==-1)
+    {
+        perror("ERROR Source File");
+        return -1;
+    }
+   þ if(fddestination==-1)
+    {
+        perror("ERROR destination File");
+        return -1;
+    }
+    þwhile((readcount=read(fdsource,buffer,10))!=0)
+    {
+        
+        writecount=write(fddestinationþ,buffer,strlen(buffer));
+        memset(buffer,'\0',10);//this line is imp because when the count isþ less then 10 and if i dont flush this end la if 3 letter
+        //read kela tr display kartana 4thþ to 10th idex madhe data ahe so print hotay
+    }
+
+    close(fdsource);
+    close(fddestination);
+  þ  return 0;
+}
+include<errno.h>
+#include<unistd.h>
+#include<string.h>
+#include<stdlib.h>
+#include<sysþ/stat.h>
+#include<sys/types.h>
+#include<time.h>
+int main(int argc,char *argv[])
+{
+    if(argc!=3)
+  þ  {
+        printf("ERROR:Invalid number of arguments\nSYNTAX -> problem1 <filename>\n");
+        exþit(-1);
+    }
+    int fdsource=0,fddestination=0,readcount=0,writecount=0;
+    char buffer[10];
+    þmemset(buffer,'\0',10);
+
+    fdsource=open(argv[1],O_RDONLY);
+    fddestination=open(argv[2],O_RDWR þ| O_CREAT | O_APPEND,0777);
+    if(fdsource==-1)
+    {
+        perror("ERROR Source File");
+        þreturn -1;
+    }
+    if(fddestination==-1)
+    {
+        perror("ERROR destination File");
+        rþeturn -1;
+    }
+    while((readcount=read(fdsource,buffer,10))!=0)
+    {
+        
+        writecountþ=write(fddestination,buffer,strlen(buffer));
+        memset(buffer,'\0',10);//this line is imp becauþse when the count is less then 10 and if i dont flush this end la if 3 letter
+        //read kela trþ display kartana 4th to 10th idex madhe data ahe so print hotay
+    }
+
+    close(fdsource);
+    closþe(fddestination);
+    return 0;
+}
+***********************************************
+hello shivali is DON
+Sweety is cute baby
+Sheru is nautanki boy
+#include<fcntl.h>
+#include<stdio.h>
+#þinclude<errno.h>
+#include<unistd.h>
+#include<string.h>
+#include<stdlib.h>
+#include<sys/stat.h>
+#inclþude<sys/types.h>
+#include<time.h>
+int main(int argc,char *argv[])
+{
+    if(argc!=3)
+    {
+        prþintf("ERROR:Invalid number of arguments\nSYNTAX -> problem1 <filename>\n");
+        exit(-1);
+    }
+þ    int fdsource=0,fddestination=0,readcount=0,writecount=0;
+    char buffer[10];
+    memset(buffer,þ'\0',10);
+
+    fdsource=open(argv[1],O_RDONLY);
+    fddestination=open(argv[2],O_RDWR | O_CREAT | O_þAPPEND,0777);
+    if(fdsource==-1)
+    {
+        perror("ERROR Source File");
+        return -1;
+   þ }
+    if(fddestination==-1)
+    {
+        perror("ERROR destination File");
+        return -1;
+    þ}
+    while((readcount=read(fdsource,buffer,10))!=0)
+    {
+        
+        writecount=write(fddestiþnation,buffer,strlen(buffer));
+        memset(buffer,'\0',10);//this line is imp because when the coþunt is less then 10 and if i dont flush this end la if 3 letter
+        //read kela tr display kartaþna 4th to 10th idex madhe data ahe so print hotay
+    }
+
+    close(fdsource);
+    close(fddestinatioþn);
+    return 0;
+}
+***********************************************
+#include<fcntl.h>
+#include<stdio.h>
+#include<errno.h>
+#include<unistd.h>
+#include<string.h>
+#includeþ<stdlib.h>
+#include<sys/stat.h>
+#include<sys/types.h>
+#include<time.h>
+int main(int argc,char *argv[þ])
+{
+    if(argc!=4)
+    {
+        printf("ERROR:Invalid number of arguments\nSYNTAX -> problem2 <soþurce filename> <destination file name> <offset>\n");
+        exit(-1);
+    }
+    int fdsource=0,fddeþstination=0,readcount=0,writecount=0;
+    char buffer[10];
+    memset(buffer,'\0',10);
+
+    fdsourceþ=open(argv[1],O_RDONLY);
+    fddestination=open(argv[2],O_RDWR | O_CREAT | O_APPEND,0777);
+    if(fdþsource==-1)
+    {
+        perror("ERROR Source File");
+        return -1;
+    }
+    if(fddestinationþ==-1)
+    {
+        perror("ERROR destination File");
+        return -1;
+    }
+    int offset=lseek(þfdsource,atoi(argv[3]),SEEK_SET);
+    while((readcount=read(fdsource,buffer,10))!=0)
+    {
+        
+þ        writecount=write(fddestination,buffer,strlen(buffer));
+        memset(buffer,'\0',10);//thisþ line is imp because when the count is less then 10 and if i dont flush this end la if 3 letter
+    þ    //read kela tr display kartana 4th to 10th idex madhe data ahe so print hotay
+    }
+
+    close(fþdsource);
+    close(fddestination);
+    return 0;
+}***********************************************
+#include<fcntl.h>
+#include<stdio.h>
+#include<errno.h>
+#include<unistd.h>
+#include<string.h>
+#includeþ<stdlib.h>
+#include<sys/stat.h>
+#include<sys/types.h>
+#include<time.h>
+int main(int argc,char *argv[þ])
+{
+    if(argc!=3)
+    {
+        printf("ERROR:Invalid number of arguments\nSYNTAX -> problem3 <soþurce file name> <destination file name>\n");
+        exit(-1);
+    }
+    int fdsource=0,fddestinatioþn=0,readcount=0,writecount=0;
+    off_t offset=0;
+    char buffer[10];
+    memset(buffer,'\0',10);
+
+þ    fdsource=open(argv[1],O_RDONLY);
+    fddestination=open(argv[2],O_RDWR | O_CREAT | O_APPEND,0777þ);
+    if(fdsource==-1)
+    {
+        perror("ERROR Source File");
+        return -1;
+    }
+    if(fþddestination==-1)
+    {
+        perror("ERROR destination File");
+        return -1;
+    }
+    whileþ((readcount=pread(fdsource,buffer,10,offset))!=0)
+    {
+        
+        writecount=pwrite(fddestinaþtion,buffer,strlen(buffer),offset);
+        offset += readcount;
+        memset(buffer,'\0',10);//thþis line is imp because when the count is less then 10 and if i dont flush this end la if 3 letter
+  þ      //read kela tr display kartana 4th to 10th idex madhe data ahe so print hotay
+    }
+
+    closeþ(fdsource);
+    close(fddestination);
+    return 0;
+}***********************************************
